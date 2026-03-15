@@ -1,1 +1,94 @@
+EX 1.2
+P1
+Số giây trong 42 phút 42 giây
+minutes = 42
+seconds = 42
+total_seconds = minutes * 60 + seconds
+print("1. Total seconds:", total_seconds)
+>>> 2562
+P2
+Đổi 10 km sang miles
+km = 10
+km_per_mile = 1.61
+miles = km / km_per_mile
+print("2. Miles in 10 km:", miles)
+>>> 6,21
+time_seconds = total_seconds
+seconds_per_mile = time_seconds / miles
+pace_minutes = int(seconds_per_mile // 60)
+pace_seconds = seconds_per_mile % 60
+hours = time_seconds / 3600
+mph = miles / hours
+print("3. Average pace:", pace_minutes, "minutes", round(pace_seconds,2), "seconds per mile")
+print("   Average speed:", round(mph,2), "miles per hour")
+>>> 6 phút 53 giây/mile
+>>>8.73 mph
+EX5.1
+>>> import time
+... seconds = time.time()
+... days = int(seconds // 86400)
+... remaining_seconds = seconds % 86400
+... hours = int(remaining_seconds // 3600)
+... remaining_seconds %= 3600
+... minutes = int(remaining_seconds // 60)
+... seconds = int(remaining_seconds % 60)
+... print("Days since epoch:", days)
+... print("Current time:", hours, ":", minutes, ":", seconds)
+...
+Days since epoch: 20527
+Current time: 15 : 7 : 19
+EX 2.2
+>>> import math
+...
+... # 1
+... print((4/3)*math.pi*5**3)
+...
+... # 2
+... price = 24.95*0.6
+... print(60*price + 3 + 59*0.75)
+...
+... # 3
+... time = (8*60+15)*2 + (7*60+12)*3
+... start = 6*60 + 52
+... finish = start + time
+... print(finish//60, finish%60)
+523.5987755982989
+945.4499999999999
+44 58
+EX 3.3
+2x2
+def do_twice(f):
+    f()
+    f()
 
+def do_four(f):
+    do_twice(f)
+    do_twice(f)
+
+def print_beam():
+    print('+', '- ' * 4, '+', '- ' * 4, '+')
+
+def print_post():
+    print('|', '  ' * 4, '|', '  ' * 4, '|')
+
+def print_row():
+    print_beam()
+    do_four(print_post)
+
+def draw_grid_2x2():
+    do_twice(print_row)
+    print_beam()
+4x4
+def print_beam4():
+    print('+', '- ' * 4, '+', '- ' * 4, '+', '- ' * 4, '+', '- ' * 4, '+')
+
+def print_post4():
+    print('|', '  ' * 4, '|', '  ' * 4, '|', '  ' * 4, '|', '  ' * 4, '|')
+
+def print_row4():
+    print_beam4()
+    do_four(print_post4)
+
+def draw_grid_4x4():
+    do_four(print_row4)
+    print_beam4()
