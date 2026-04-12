@@ -1,0 +1,35 @@
+                HangHoa
+---------------------------------
+- ma_hang: str
+- ten_hang: str
+- nha_sx: str
+- gia: float
+---------------------------------
++ hien_thi()
+
+        ▲
+        |
+-----------------------------------------
+|               |                       |
+HangDienMay   HangSanhSu        HangThucPham
+
+HangDienMay
+---------------------------------
+- tg_baohanh: str
+- dien_ap: str
+- cong_suat: str
+---------------------------------
++ hien_thi()
+
+HangSanhSu
+---------------------------------
+- loai_nguyen_lieu: str
+---------------------------------
++ hien_thi()
+
+HangThucPham
+---------------------------------
+- ngay_sx: str
+- ngay_het_han: str
+---------------------------------
++ hien_thi()
